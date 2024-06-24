@@ -1,0 +1,583 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "Freight Normal";
+  src: url(fonts/Freight_Big_Pro/Freight\ Big\ Pro\ Light.otf);
+}
+@font-face {
+  font-family: "Freight Italic";
+  src: url(fonts/Freight_Big_Pro/Freight\ Big\ Pro\ Light\ Italic.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Freight Normal";
+}
+
+/* ...........................................navbar......................................... */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vw 3.5vw;
+  background: transparent;
+}
+
+.navbar svg {
+  cursor: pointer;
+}
+
+.navbar svg path {
+  fill: #000;
+}
+
+.menu-wrapper {
+  display: flex;
+}
+
+.navbar i {
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: none;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+
+.navbar .menu li {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navbar .menu li::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transform: scaleX(0);
+  transition: 0.3s transform ease;
+}
+
+.navbar .menu li:hover::after {
+  transform: scaleX(1);
+}
+
+/* ...........................................page1......................................... */
+
+.page-1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #f5e41b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-1 h1 {
+  color: #000;
+  z-index: 5;
+  font-size: 7vw;
+  font-weight: 100;
+  line-height: 0.7;
+  letter-spacing: -0.3rem;
+}
+
+.loader video {
+  z-index: 9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #f5e41b;
+  z-index: 10;
+}
+
+.loader h1 {
+  color: #fff;
+  z-index: 11;
+  font-size: 7vw;
+  font-weight: 100;
+  line-height: 0.7;
+  letter-spacing: -0.3rem;
+}
+
+.yellow1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f5e41b;
+  z-index: 12;
+}
+.yellow2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f5e41b;
+  z-index: 10;
+}
+
+.page-1 .row {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.2vw 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-1 .row p {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.page-1 .row p::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transition: 0.3s transform ease;
+}
+
+.page-1 .row i {
+  position: relative;
+  display: inline-block;
+  font-size: 3vw;
+  font-weight: 100;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.page-1 .row p:hover::after {
+  transform: scaleX(1);
+}
+
+/* ............................................page2....................................... */
+
+.page-2 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s background ease;
+}
+
+.page-2-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-2 .elem {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  color: #000;
+  width: 100%;
+  cursor: pointer;
+}
+
+.page-2 .elem::-webkit-scrollbar {
+  display: none;
+}
+
+.page-2 .elem h1 {
+  position: relative;
+  line-height: 0.9;
+  font-size: 7vw;
+  font-weight: 100;
+  z-index: 10;
+  color: #fff;
+}
+
+.page-2 p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8vw;
+  display: inline-block;
+  color: #000;
+  margin-right: 2rem;
+}
+
+.page-2 .marquee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(0);
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1;
+  color: #000;
+  background: #f5e41b;
+  transition: 0.3s transform ease;
+  padding: 0.2vw;
+  width: 100%;
+}
+
+.page-2 .marquee .elem-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: animate-marquee 12s linear infinite;
+  overflow: hidden;
+}
+
+.page-2 .marquee .blur {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: 100%;
+  background: #f5e41b;
+  z-index: 10;
+}
+
+.page-2 .elem:hover .marquee {
+  transform: translate(-50%, -50%) scaleY(1);
+}
+
+.page-2-content .elem:hover h1 {
+  font-style: italic;
+  color: #000;
+}
+
+@keyframes animate-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 2.1rem));
+  }
+}
+
+/* ...............................................page3................................................ */
+
+.page-3 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+}
+
+.page-3-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: dense;
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  margin: 2rem 0.6rem;
+}
+
+.img-container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-size: 1.2vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #0000002c;
+  opacity: 0;
+  transition: 0.5s opacity ease;
+  cursor: pointer;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+/* ....................................................footer.......................................... */
+
+.footer {
+  position: relative;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2vw;
+}
+
+.footer-top i {
+  text-align: center;
+  display: block;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+.footer-top h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3vw;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-bottom p {
+  position: relative;
+  font-size: 1.2vw;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  font-size: 1.2vw;
+}
+
+.footer-row p {
+  cursor: pointer;
+  position: relative;
+}
+
+.footer-row p::after,
+.footer-bottom p::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: 0.3s transform ease;
+}
+
+.footer-row p:hover::after {
+  transform: scaleX(1);
+}
+.footer-bottom p:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+  /* ...........................................navbar......................................... */
+
+  .navbar .menu {
+    position: absolute;
+    top: 0;
+    right: -40%;
+    height: 100vh;
+    width: 40%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vw;
+    background: rgba(238, 218, 0, 0.337);
+    backdrop-filter: blur(0.2rem);
+    transition: right 0.9s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .menu.open-menu {
+    right: 0;
+  }
+
+  .navbar .menu li:nth-child(1) {
+    margin-top: 20vw;
+  }
+
+  .navbar .menu li {
+    font-size: 3vw;
+  }
+
+  .navbar i {
+    display: inline-block;
+    font-size: 6vw;
+    padding: 1vw 4vw;
+  }
+
+  .menu-icon.rotate-menu {
+    transform: rotate(405deg);
+  }
+
+  /* ...........................................page1......................................... */
+
+  .page-1 h1 {
+    font-size: 10vw;
+    line-height: 1;
+    letter-spacing: -0.2rem;
+  }
+
+  .loader h1 {
+    font-size: 10vw;
+    line-height: 1;
+    letter-spacing: -0.2rem;
+  }
+
+  .page-1 .row {
+    padding: 2vw 4vw;
+  }
+
+  .page-1 .row p {
+    font-size: 4vw;
+  }
+
+  .page-1 .row i {
+    font-size: 7vw;
+  }
+
+  /* ............................................page2....................................... */
+
+  .page-2 .elem h1 {
+    line-height: 1.2;
+    font-size: 12vw;
+  }
+
+  .page-2 p {
+    font-size: 3vw;
+  }
+
+  /* ...............................................page3................................................ */
+
+  .page-3 {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #fff;
+  }
+
+  .page-3-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .img-container {
+    margin: 1.5rem 0.6rem;
+  }
+
+  .overlay {
+    font-size: 1.5vw;
+    color: #fff;
+  }
+
+  /* ....................................................footer.......................................... */
+
+  .footer {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2vw;
+  }
+
+  .footer-top i {
+    font-size: 6vw;
+  }
+
+  .footer-top h1 {
+    font-size: 3vw;
+  }
+
+  .footer-bottom {
+    padding: 4vw;
+    height: 10vh;
+  }
+
+  .footer-bottom p {
+    font-size: 3vw;
+  }
+
+  .footer-row {
+    font-size: 3vw;
+  }
+
+  .footer-row p::after,
+  .footer-bottom p::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: 0.3s transform ease;
+  }
+}
